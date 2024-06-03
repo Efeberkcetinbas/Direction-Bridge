@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (hit.transform == transform && !isMoving)
                     {
+                        Debug.Log("PLAYER START MOVE EVENT");
                         isMoving = true;
                         MoveCar();
                     }
@@ -47,6 +48,7 @@ public class PlayerMove : MonoBehaviour
         // Check if the next position is valid and if the car hasn't reached the target
         if (CanMoveTo(nextPosition) && nextPosition != targetPosition)
         {
+            Debug.Log("PLAYER MOVE EVENT");
             transform.DOJump(nextPosition, 1,1,1 / speed).OnComplete(() =>
             {
                 // Update the current position to the new position
@@ -58,6 +60,7 @@ public class PlayerMove : MonoBehaviour
                 if (nextPosition == targetPosition || !CanMoveTo(nextPosition))
                 {
                     isMoving = false; // Stop the movement
+                    Debug.Log("PLAYER MOVE ENDED EVENT");
                     return;
                 }
 
@@ -68,6 +71,7 @@ public class PlayerMove : MonoBehaviour
         else
         {
             isMoving = false; // Stop the movement if it cannot move further
+            
         }
     }
 

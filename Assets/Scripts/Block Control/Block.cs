@@ -9,7 +9,7 @@ public class Block : MonoBehaviour
     {
         // Calculate the target position
         Vector3 targetPosition = transform.position + direction;
-
+        Debug.Log("SELECT SOUND");
         // Slide the cube until it encounters an obstacle or reaches the grid boundary
         while (CanSlide(targetPosition))
         {
@@ -18,10 +18,11 @@ public class Block : MonoBehaviour
 
             // Calculate the next target position
             targetPosition += direction;
-
+            Debug.Log("MULTIPLE SOUND");
             // Break the loop if the next position is not within bounds or is occupied
             if (!CanSlide(targetPosition))
             {
+                Debug.Log("MOVE SOUND");
                 break;
             }
         }
