@@ -64,6 +64,12 @@ public class PlayerMove : MonoBehaviour
                     return;
                 }
 
+                if(nextPosition==targetPosition)
+                {
+                    //Buraya color path deki mekanigi getir
+                    Debug.Log("CORRECT");
+                }
+
                 // Move to the next position
                 MoveToNextPosition(currentPosition, nextPosition);
             });
