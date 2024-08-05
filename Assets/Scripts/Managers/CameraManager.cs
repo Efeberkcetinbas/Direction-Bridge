@@ -9,7 +9,6 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera cm;
 
 
-    private CenterPoint centerPoint;
 
     [Header("Shake Control")]
     [SerializeField] private float shakeTime = 0.5f;
@@ -43,8 +42,7 @@ public class CameraManager : MonoBehaviour
 
     private void OnNextLevel()
     {
-        centerPoint=FindObjectOfType<CenterPoint>();
-        ChangeLookAt(centerPoint.transform);
+        
     }
 
     

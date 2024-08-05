@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem dustParticle;
-
-    internal void CreateDustParticle()
+    // Start is called before the first frame update
+    void Start()
     {
-        dustParticle.Play();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
