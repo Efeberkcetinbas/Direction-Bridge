@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Cube
   - Obstacle
+  - FxTemporaire
+  - NumberOperation
+  - Train
   layers:
   - Default
   - TransparentFX
